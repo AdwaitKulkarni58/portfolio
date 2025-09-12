@@ -78,7 +78,7 @@ export default function About() {
             >
               <div className="prose prose-lg prose-invert max-w-none">
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  I'm a passionate full-stack developer with a love for creating
+                  I&apos;m a passionate full-stack developer with a love for creating
                   innovative solutions that solve real-world problems. With over
                   1 year of experience in software development and problem
                   solving, I specialize in building scalable applications using
@@ -92,7 +92,7 @@ export default function About() {
                   impact.
                 </p>
                 <p className="text-gray-300 leading-relaxed">
-                  When I'm not coding, you'll find me exploring new
+                  When I&apos;m not coding, you&apos;ll find me exploring new
                   technologies, contributing to open-source projects, or sharing
                   knowledge with the developer community.
                 </p>
