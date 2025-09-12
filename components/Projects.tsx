@@ -96,7 +96,7 @@ const projects = [
     status: "Live",
     featured: true,
     github: "https://github.com/AdwaitKulkarni58/portfolio",
-    live: "#",
+    live: "https://adwaitkulkarni.vercel.app/",
   },
   {
     id: 5,
