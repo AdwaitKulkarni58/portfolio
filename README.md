@@ -25,7 +25,7 @@ A blazing-fast, modern portfolio website built with Next.js, TypeScript, and Fra
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/adwaitkulkarni/portfolio.git
+git clone https://github.com/AdwaitKulkarni58/portfolio
 cd portfolio
 ```
 
@@ -62,22 +62,6 @@ npm run dev
 │   └── utils.ts             # Utility functions
 └── public/
     └── Adwait_Kulkarni_Resume.pdf
-```
-
-## 🎨 Customization
-
-### Colors
-The color scheme can be customized in `tailwind.config.js`:
-
-```javascript
-colors: {
-  primary: {
-    // Your primary color palette
-  },
-  dark: {
-    // Your dark theme colors
-  }
-}
 ```
 
 ### Content
@@ -132,9 +116,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-Adwait Kulkarni - [adwaitkulkarni@gmail.com](mailto:adwaitkulkarni@gmail.com)
+Adwait Kulkarni - [adwait.kul.2018@gmail.com](mailto:adwait.kul.2018@gmail.com)
 
-Project Link: [https://github.com/adwaitkulkarni/portfolio](https://github.com/adwaitkulkarni/portfolio)
+Project Link: [https://github.com/AdwaitKulkarni58/portfolio](https://github.com/AdwaitKulkarni58/portfolio)
 
 ---
 
