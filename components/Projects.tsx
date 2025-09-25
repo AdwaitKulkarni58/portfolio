@@ -82,7 +82,7 @@ const projects = [
       "A React Native mobile app that recommends songs and playlists based on your mood, with personalized ML-driven insights.",
     longDescription:
       "Moodify is a cross-platform mobile app that lets users discover and manage playlists tailored to their mood. Users log in, select their mood, and receive curated song recommendations. The app leverages machine learning to analyze user interactions, cluster users by listening patterns, and provide personalized insights through an interactive dashboard on the screen. Built with React Native, Express.js, MongoDB, and Python (scikit-learn) for the ML pipeline.",
-    image: "/moodify.jpeg",
+    image: "/moodify.png",
     technologies: [
       "React Native",
       "Expo",
