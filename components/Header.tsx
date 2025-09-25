@@ -1,45 +1,50 @@
-'use client'
+"use client";
 
-import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, Code, Github, Linkedin, Mail } from 'lucide-react'
-import { cn } from '@/lib/utils'
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X, Code, Github, Linkedin, Mail } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const navItems = [
-  { name: 'Home', href: '#home' },
-  { name: 'About', href: '#about' },
-  { name: 'Skills', href: '#skills' },
-  { name: 'Experience', href: '#experience' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Contact', href: '#contact' },
-]
+  { name: "Home", href: "#home" },
+  { name: "About", href: "#about" },
+  { name: "Skills", href: "#skills" },
+  { name: "Experience", href: "#experience" },
+  { name: "Projects", href: "#projects" },
+  { name: "Contact", href: "#contact" },
+  { name: "Resume", href: "/Adwait_Kulkarni_Resume.pdf" },
+];
 
 const socialLinks = [
-  { name: 'GitHub', href: 'https://github.com/AdwaitKulkarni58', icon: Github },
-  { name: 'LinkedIn', href: 'https://www.linkedin.com/in/adwaitkulkarni58/', icon: Linkedin },
-  { name: 'Email', href: 'mailto:adwait.kul.2018@gmail.com', icon: Mail },
-]
+  { name: "GitHub", href: "https://github.com/AdwaitKulkarni58", icon: Github },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/adwaitkulkarni58/",
+    icon: Linkedin,
+  },
+  { name: "Email", href: "mailto:adwait.kul.2018@gmail.com", icon: Mail },
+];
 
 export default function Header() {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
+      setIsScrolled(window.scrollY > 50);
+    };
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const scrollToSection = (href: string) => {
-    const element = document.querySelector(href)
+    const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+      element.scrollIntoView({ behavior: "smooth" });
     }
-    setIsMobileMenuOpen(false)
-  }
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <motion.header
@@ -47,10 +52,10 @@ export default function Header() {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
-          ? 'bg-dark-900/95 backdrop-blur-md border-b border-white/10'
-          : 'bg-transparent'
+          ? "bg-dark-900/95 backdrop-blur-md border-b border-white/10"
+          : "bg-transparent"
       )}
     >
       <div className="container">
@@ -64,7 +69,9 @@ export default function Header() {
             <div className="w-8 h-8 bg-gradient-to-r from-primary-500 to-primary-600 rounded-lg flex items-center justify-center">
               <Code className="w-5 h-5 text-white" />
             </div>
-            <a className="text-xl font-bold gradient-text" href="#home">Adwait</a>
+            <a className="text-xl font-bold gradient-text" href="#home">
+              Adwait
+            </a>
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -105,7 +112,11 @@ export default function Header() {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200"
           >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </motion.button>
         </div>
       </div>
@@ -115,7 +126,7 @@ export default function Header() {
         {isMobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
+            animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
             className="md:hidden bg-dark-800/95 backdrop-blur-md border-t border-white/10"
@@ -153,5 +164,5 @@ export default function Header() {
         )}
       </AnimatePresence>
     </motion.header>
-  )
+  );
 }
