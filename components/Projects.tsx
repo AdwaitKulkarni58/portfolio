@@ -95,7 +95,8 @@ const projects = [
       "Spotify API",
     ],
     category: "Mobile App",
-    status: "Developed"
+    status: "Developed",
+    github: "https://github.com/AdwaitKulkarni58/mood-based-song-recommender",
   },
   {
     id: 5,
