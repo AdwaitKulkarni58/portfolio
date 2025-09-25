@@ -3,15 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import {
-  ExternalLink,
-  Github,
-  Code2,
-  Eye,
-  Star,
-  Calendar,
-  X,
-} from "lucide-react";
+import { ExternalLink, Github, Code2, Eye, Star, X } from "lucide-react";
 
 const projects = [
   {
@@ -85,6 +77,28 @@ const projects = [
   },
   {
     id: 4,
+    title: "Moodify: ML-Powered Music Insights",
+    description:
+      "A React Native mobile app that recommends songs and playlists based on your mood, with personalized ML-driven insights.",
+    longDescription:
+      "Moodify is a cross-platform mobile app that lets users discover and manage playlists tailored to their mood. Users log in, select their mood, and receive curated song recommendations. The app leverages machine learning to analyze user interactions, cluster users by listening patterns, and provide personalized insights through an interactive dashboard on the screen. Built with React Native, Express.js, MongoDB, and Python (scikit-learn) for the ML pipeline.",
+    image: "/moodify.jpeg",
+    technologies: [
+      "React Native",
+      "Expo",
+      "Express.js",
+      "MongoDB",
+      "Node.js",
+      "Python",
+      "Scikit-Learn",
+      "JWT Auth",
+      "Spotify API",
+    ],
+    category: "Mobile App",
+    status: "Developed"
+  },
+  {
+    id: 5,
     title: "Portfolio Website",
     description:
       "A modern, responsive portfolio website with smooth animations and optimized performance.",
@@ -99,7 +113,7 @@ const projects = [
     live: "https://adwaitkulkarni.vercel.app/",
   },
   {
-    id: 5,
+    id: 6,
     title: "Mining, Eh?",
     description:
       "A project to explore the distribution of different mines throughout history in Canada.",
@@ -114,7 +128,7 @@ const projects = [
     live: "https://adwaitkulkarni58.github.io/Explore-Canadian-Mines/",
   },
   {
-    id: 6,
+    id: 7,
     title: "The Olympic Games",
     description:
       "A Historical Analysis of the Olympic Games from 1896 to 2020.",
@@ -129,7 +143,7 @@ const projects = [
     live: "https://adwaitkulkarni58.github.io/DSCI320-project-website/",
   },
   {
-    id: 7,
+    id: 8,
     title: "Tweet-Vibes",
     description:
       "An application using Java Spring and Apache Kafka to acquire tweets in real-time and provide REST endpoints to index a particular tweet in Elasticsearch while performing sentiment analysis on the same.",
@@ -151,7 +165,7 @@ const projects = [
     live: null,
   },
   {
-    id: 8,
+    id: 9,
     title: "ClusterVAN",
     description:
       "A geospatial analytics tool to visualize active businesses in Vancouver and get personalized recommendations for new business opportunities based on location and business type.",
@@ -166,7 +180,7 @@ const projects = [
     live: null,
   },
   {
-    id: 9,
+    id: 10,
     title: "Dungeons and Databases",
     description:
       "The domain of the project, Dungeons and Databases, lies within tabletop gaming and gaming utility. In this domain, the database primarily focuses on organizing and tracking specific details within and between DND campaigns. It will model aspects such as character definitions and campaign progression, and maintain the accessibility of this information for online gameplay.",
@@ -180,7 +194,7 @@ const projects = [
     github: "https://github.com/AdwaitKulkarni58/Dungeons-and-Databases",
   },
   {
-    id: 10,
+    id: 11,
     title: "Little Lemon",
     description:
       "A front-end application for a restaurant website, focusing on responsive design and user experience.",
@@ -194,7 +208,7 @@ const projects = [
     github: "https://github.com/AdwaitKulkarni58/Little-Lemon-Front-End",
   },
   {
-    id: 11,
+    id: 12,
     title: "User Management System",
     description:
       "A backend application for managing user accounts, roles, and permissions.",
@@ -216,19 +230,14 @@ const projects = [
     github: "https://github.com/AdwaitKulkarni58/User-Management-System",
   },
   {
-    id: 12,
+    id: 13,
     title: "Under Control",
     description:
       "A platform to promote gender equality with the power of choice.",
     longDescription:
       "This is a platform where users can order products from pharmacies near them and get them delivered at their doorstep. The project aims to promote gender equality by keeping the identity of the user anonymous and providing a safe space for users to order products of their choice.",
     image: "/under-control.png",
-    technologies: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Google Maps API",
-    ],
+    technologies: ["HTML", "CSS", "JavaScript", "Google Maps API"],
     category: "Frontend",
     status: "Live",
     featured: false,
@@ -236,18 +245,13 @@ const projects = [
     live: "https://adwaitkulkarni58.github.io/BCSHacks/",
   },
   {
-    id: 13,
+    id: 14,
     title: "TinDog (Tinder for Dogs)",
-    description:
-      "A platform to help dog owners find playdates for their pets.",
+    description: "A platform to help dog owners find playdates for their pets.",
     longDescription:
       "TinDog is a web application designed to connect dog owners with other dog owners in their area. The platform allows users to create profiles for their dogs, browse other dogs' profiles, and arrange playdates. With a focus on community and social interaction, TinDog aims to make it easier for dog owners to find friends for their pets.",
     image: "/tindog.png",
-    technologies: [
-      "HTML",
-      "CSS",
-      "Bootstrap",
-    ],
+    technologies: ["HTML", "CSS", "Bootstrap"],
     category: "Frontend",
     status: "Live",
     featured: false,
@@ -255,7 +259,7 @@ const projects = [
     live: "https://adwaitkulkarni58.github.io/TinDog-Tinder-for-Dogs-/",
   },
   {
-    id: 14,
+    id: 15,
     title: "People Data Management Solution",
     description:
       "A microservice-based application that provides a management solution for individual clients and companies.",
@@ -277,7 +281,8 @@ const projects = [
     category: "Backend",
     status: "Developed",
     featured: false,
-    github: "https://github.com/AdwaitKulkarni58/people-data-management-solution"
+    github:
+      "https://github.com/AdwaitKulkarni58/people-data-management-solution",
   },
 ];
 
@@ -286,6 +291,7 @@ const categories = [
   "Full Stack",
   "Frontend",
   "Backend",
+  "Mobile App",
   "Machine Learning / Data Science",
   "Web App",
 ];
