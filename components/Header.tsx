@@ -12,7 +12,11 @@ const navItems = [
   { name: "Experience", href: "#experience" },
   { name: "Projects", href: "#projects" },
   { name: "Contact", href: "#contact" },
-  { name: "Resume", href: "/Adwait_Kulkarni_Resume.pdf" },
+  {
+    name: "Resume",
+    href: "/Adwait_Kulkarni_Resume.pdf",
+    onClick: () => window.open("/Adwait_Kulkarni_Resume.pdf", "_blank"),
+  },
 ];
 
 const socialLinks = [
