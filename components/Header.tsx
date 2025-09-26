@@ -12,11 +12,7 @@ const navItems = [
   { name: "Experience", href: "#experience" },
   { name: "Projects", href: "#projects" },
   { name: "Contact", href: "#contact" },
-  {
-    name: "Resume",
-    href: "/Adwait_Kulkarni_Resume.pdf",
-    onClick: () => window.open("/Adwait_Kulkarni_Resume.pdf", "_blank"),
-  },
+  { name: "Resume", href: "/Adwait_Kulkarni_Resume.pdf", external: true },
 ];
 
 const socialLinks = [
@@ -80,17 +76,31 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <motion.button
-                key={item.name}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => scrollToSection(item.href)}
-                className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
-              >
-                {item.name}
-              </motion.button>
-            ))}
+            {navItems.map((item) =>
+              item.external ? (
+                <motion.a
+                  key={item.name}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
+                >
+                  {item.name}
+                </motion.a>
+              ) : (
+                <motion.button
+                  key={item.name}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => scrollToSection(item.href)}
+                  className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
+                >
+                  {item.name}
+                </motion.button>
+              )
+            )}
           </nav>
 
           {/* Social Links */}
@@ -137,16 +147,32 @@ export default function Header() {
           >
             <div className="container py-4">
               <nav className="flex flex-col space-y-4">
-                {navItems.map((item) => (
-                  <motion.button
-                    key={item.name}
-                    whileHover={{ x: 10 }}
-                    onClick={() => scrollToSection(item.href)}
-                    className="text-left text-gray-300 hover:text-white transition-colors duration-200 font-medium py-2"
-                  >
-                    {item.name}
-                  </motion.button>
-                ))}
+                {navItems.map((item) =>
+                  item.external ? (
+                    <motion.a
+                      key={item.name}
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
+                    >
+                      {item.name}
+                    </motion.a>
+                  ) : (
+                    <motion.button
+                      key={item.name}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      onClick={() => scrollToSection(item.href)}
+                      className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
+                    >
+                      {item.name}
+                    </motion.button>
+                  )
+                )}
+
                 <div className="flex items-center space-x-4 pt-4 border-t border-white/10">
                   {socialLinks.map((social) => (
                     <motion.a
