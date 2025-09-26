@@ -110,7 +110,7 @@ const projects = [
     category: "Machine Learning / Data Science",
     status: "Developed",
     featured: true,
-    github: "https://github.com/AdwaitKulkarni58/dsci100-2023W2-group14",
+    github: "https://github.com/AdwaitKulkarni58/Predict-the-Likelihood-of-Heart-Disease",
     live: null,
   },
   {
