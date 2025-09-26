@@ -77,11 +77,11 @@ const projects = [
   },
   {
     id: 4,
-    title: "Moodify: ML-Powered Music Insights",
+    title: "MoodMatch AI: ML-Powered Music Insights",
     description:
       "A React Native mobile app that recommends songs and playlists based on your mood, with personalized ML-driven insights.",
     longDescription:
-      "Moodify is a cross-platform mobile app that lets users discover and manage playlists tailored to their mood. Users log in, select their mood, and receive curated song recommendations. The app leverages machine learning to analyze user interactions, cluster users by listening patterns, and provide personalized insights through an interactive dashboard on the screen. Built with React Native, Express.js, MongoDB, and Python (scikit-learn) for the ML pipeline.",
+      "MoodMatch AI is a cross-platform mobile app that lets users discover and manage playlists tailored to their mood. Users log in, select their mood, and receive curated song recommendations. The app leverages machine learning to analyze user interactions and provide personalized insights using content-based filtering through a dashboard on the screen. Built with React Native, Express.js, MongoDB, and Python (scikit-learn) for the ML pipeline.",
     image: "/moodify.png",
     technologies: [
       "React Native",
@@ -100,6 +100,21 @@ const projects = [
   },
   {
     id: 5,
+    title: "Predict the Likelihood of Heart Disease",
+    description:
+      "A machine learning analysis to predict the likelihood of heart disease based on patient data.",
+    longDescription:
+      "What does a patient's age, exercise-induced ST depression, and maximum heart rate tell us about the likelihood of the patient being diagnosed with heart disease? This project aims to answer this question by performing an exploratory data analysis on the UCI Heart Disease dataset, which contains 14 attributes related to heart disease diagnosis. The analysis includes data cleaning, visualization, and the application of the K-Nearest Neighbors (KNN) machine learning model to predict the presence of heart disease. The performance of each model is evaluated using accuracy, precision, and recall metrics, and the best-performing model is selected for deployment.",
+    image: "/heart.png",
+    technologies: ["Python", "pandas", "numpy", "scikit-learn", "altair"],
+    category: "Machine Learning / Data Science",
+    status: "Developed",
+    featured: true,
+    github: "https://github.com/AdwaitKulkarni58/dsci100-2023W2-group14",
+    live: null,
+  },
+  {
+    id: 6,
     title: "Portfolio Website",
     description:
       "A modern, responsive portfolio website with smooth animations and optimized performance.",
@@ -114,7 +129,7 @@ const projects = [
     live: "https://adwaitkulkarni.vercel.app/",
   },
   {
-    id: 6,
+    id: 7,
     title: "Mining, Eh?",
     description:
       "A project to explore the distribution of different mines throughout history in Canada.",
@@ -129,7 +144,7 @@ const projects = [
     live: "https://adwaitkulkarni58.github.io/Explore-Canadian-Mines/",
   },
   {
-    id: 7,
+    id: 8,
     title: "The Olympic Games",
     description:
       "A Historical Analysis of the Olympic Games from 1896 to 2020.",
@@ -144,7 +159,7 @@ const projects = [
     live: "https://adwaitkulkarni58.github.io/DSCI320-project-website/",
   },
   {
-    id: 8,
+    id: 9,
     title: "Tweet-Vibes",
     description:
       "An application using Java Spring and Apache Kafka to acquire tweets in real-time and provide REST endpoints to index a particular tweet in Elasticsearch while performing sentiment analysis on the same.",
@@ -166,7 +181,7 @@ const projects = [
     live: null,
   },
   {
-    id: 9,
+    id: 10,
     title: "ClusterVAN",
     description:
       "A geospatial analytics tool to visualize active businesses in Vancouver and get personalized recommendations for new business opportunities based on location and business type.",
@@ -181,7 +196,7 @@ const projects = [
     live: null,
   },
   {
-    id: 10,
+    id: 11,
     title: "Dungeons and Databases",
     description:
       "The domain of the project, Dungeons and Databases, lies within tabletop gaming and gaming utility. In this domain, the database primarily focuses on organizing and tracking specific details within and between DND campaigns. It will model aspects such as character definitions and campaign progression, and maintain the accessibility of this information for online gameplay.",
@@ -195,7 +210,7 @@ const projects = [
     github: "https://github.com/AdwaitKulkarni58/Dungeons-and-Databases",
   },
   {
-    id: 11,
+    id: 12,
     title: "Little Lemon",
     description:
       "A front-end application for a restaurant website, focusing on responsive design and user experience.",
@@ -209,7 +224,7 @@ const projects = [
     github: "https://github.com/AdwaitKulkarni58/Little-Lemon-Front-End",
   },
   {
-    id: 12,
+    id: 13,
     title: "User Management System",
     description:
       "A backend application for managing user accounts, roles, and permissions.",
@@ -231,7 +246,7 @@ const projects = [
     github: "https://github.com/AdwaitKulkarni58/User-Management-System",
   },
   {
-    id: 13,
+    id: 14,
     title: "Under Control",
     description:
       "A platform to promote gender equality with the power of choice.",
@@ -246,7 +261,7 @@ const projects = [
     live: "https://adwaitkulkarni58.github.io/BCSHacks/",
   },
   {
-    id: 14,
+    id: 15,
     title: "TinDog (Tinder for Dogs)",
     description: "A platform to help dog owners find playdates for their pets.",
     longDescription:
@@ -260,7 +275,7 @@ const projects = [
     live: "https://adwaitkulkarni58.github.io/TinDog-Tinder-for-Dogs-/",
   },
   {
-    id: 15,
+    id: 16,
     title: "People Data Management Solution",
     description:
       "A microservice-based application that provides a management solution for individual clients and companies.",
