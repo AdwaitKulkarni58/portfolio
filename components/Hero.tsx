@@ -1,40 +1,43 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { ChevronDown, Code2, Sparkles, Zap } from 'lucide-react'
-import { useEffect, useState } from 'react'
+import { motion } from "framer-motion";
+import { ChevronDown, Code2, Sparkles, Zap } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const roles = [
-  'Full Stack Developer',
-  'Software Engineer',
-  'Problem Solver',
-  'AI/ML Enthusiast'
-]
+  "Full Stack Developer",
+  "Software Engineer",
+  "Problem Solver",
+  "AI/ML Enthusiast",
+];
 
 export default function Hero() {
-  const [currentRole, setCurrentRole] = useState(0)
-  const [isVisible, setIsVisible] = useState(false)
+  const [currentRole, setCurrentRole] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true)
+    setIsVisible(true);
     const interval = setInterval(() => {
-      setCurrentRole((prev) => (prev + 1) % roles.length)
-    }, 3000)
-    return () => clearInterval(interval)
-  }, [])
+      setCurrentRole((prev) => (prev + 1) % roles.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   const scrollToAbout = () => {
-    const element = document.querySelector('#about')
+    const element = document.querySelector("#about");
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+      element.scrollIntoView({ behavior: "smooth" });
     }
-  }
+  };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+    >
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-hero-pattern opacity-30" />
-      
+
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -46,7 +49,7 @@ export default function Hero() {
           transition={{
             duration: 20,
             repeat: Infinity,
-            ease: "linear"
+            ease: "linear",
           }}
           className="absolute top-20 left-20 w-32 h-32 bg-primary-500/10 rounded-full blur-xl"
         />
@@ -59,7 +62,7 @@ export default function Hero() {
           transition={{
             duration: 25,
             repeat: Infinity,
-            ease: "linear"
+            ease: "linear",
           }}
           className="absolute bottom-20 right-20 w-40 h-40 bg-primary-600/10 rounded-full blur-xl"
         />
@@ -72,7 +75,7 @@ export default function Hero() {
           transition={{
             duration: 15,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: "easeInOut",
           }}
           className="absolute top-1/2 left-1/2 w-20 h-20 bg-primary-400/20 rounded-full blur-lg"
         />
@@ -118,8 +121,9 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-lg md:text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed"
           >
-            I craft exceptional digital experiences through clean code, innovative solutions, 
-            and a passion for turning complex problems into elegant software.
+            I craft exceptional digital experiences through clean code,
+            innovative solutions, and a hunger for turning complex problems into
+            robust and simple software solutions.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -143,11 +147,15 @@ export default function Hero() {
                 <ChevronDown className="w-5 h-5" />
               </motion.div>
             </motion.button>
-            
+
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() =>
+                document
+                  .querySelector("#contact")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
               className="btn-secondary flex items-center space-x-2"
             >
               <span>Get In Touch</span>
@@ -176,5 +184,5 @@ export default function Hero() {
         </motion.div>
       </motion.div>
     </section>
-  )
+  );
 }
