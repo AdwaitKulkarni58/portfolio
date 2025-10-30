@@ -22,7 +22,7 @@ const experiences = [
       "Drove codebase migration from Serverless Framework to AWS CDK for 10+ services, streamlining IaC deployments using CloudFormation.",
       "Automated SQL-based defect remediation for DynamoDB data using Node.js + CDK across 20+ services.",
     ],
-    technologies: ["React.js", "Node.js", "AWS Services", "DynamoDB"],
+    technologies: ["React.js", "Node.js", "AWS Services", "DynamoDB", "REST APIs"],
   },
   {
     title: "Full Stack Developer",
