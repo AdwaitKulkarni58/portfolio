@@ -8,7 +8,7 @@ import { Calendar, MapPin, Building2, Award, Code, Users } from "lucide-react";
 const experiences = [
   {
     title: "Software Developer",
-    company: "Tata Consultancy Services - Aviation Domain",
+    company: "IT Consulting Firm - Aviation Domain",
     location: "Toronto, Canada",
     period: "2025 - Present",
     type: "Full-time",
