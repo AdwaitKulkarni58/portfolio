@@ -63,7 +63,7 @@ const certifications = [
     name: "AWS Certified Cloud Practitioner – Associate",
     issuer: "AWS",
     icon: Code,
-    image: "/aws-cloud-practitioner.png",
+    image: "/aws-certified-cloud-practitioner.png",
   },
   {
     name: "Meta Full-Stack Engineer Certificate",
