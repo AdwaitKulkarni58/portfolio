@@ -7,22 +7,28 @@ import { Calendar, MapPin, Building2, Award, Code, Users } from "lucide-react";
 
 const experiences = [
   {
-    title: "Software Developer",
-    company: "IT Consulting Firm - Aviation Domain",
+    title: "Full-Stack Cloud Developer",
+    company: "IT Consulting Firm - Air Canada",
     location: "Toronto, Canada",
     period: "2025 - Present",
     type: "Full-time",
     description:
       "Leading development of scalable mobile applications using React, Node.js, and cloud technologies. Mentoring other developers and implementing best practices.",
     achievements: [
-      "Shipped cloud-native mobile services with React.js, Node.js, and AWS, supporting 100K+ Air Canada users.",
-      "Engineered REST APIs with Lambda, DynamoDB, and S3, reducing latency by 30% and achieving 99.9% uptime.",
-      "Assisted in building an AI-powered virtual chatbot on AWS Connect using Claude LLM and SQS queues, with 90% intent accuracy for 100K+ queries/month.",
-      "Re-architected passenger support workflows with Lambda, DynamoDB, and DAX cache, cutting latency from 5 ms to 500 µs for 50K+ real-time events.",
-      "Drove codebase migration from Serverless Framework to AWS CDK for 10+ services, streamlining IaC deployments using CloudFormation.",
-      "Automated SQL-based defect remediation for DynamoDB data using Node.js + CDK across 20+ services.",
+      "Launched and scaled AWS-based mobile services with React.js and Node.js for 100K+ Air Canada passengers.",
+      "Reduced API latency using Lambda and DynamoDB, cutting times from 50ms → 500µs for 50K+ events/day.",
+      "Developed an AI virtual assistant on AWS Connect using Claude LLM and SQS with 90% intent accuracy.",
+      "Eliminated 100+ manual QA hours/month across 20+ services by automating defect remediation for DynamoDB records with Node.js and SQL pipelines.",
+      "Migrated 10+ services from Serverless Framework to AWS CDK, reducing deployment time by 40% and standardizing Infrastructure-as-Code (IaC) practices.",
+      "Collaborated with DevOps to build CI/CD pipelines via GitHub Actions, CloudFormation, and IAM roles.",
     ],
-    technologies: ["React.js", "Node.js", "AWS Services", "DynamoDB", "REST APIs"],
+    technologies: [
+      "React.js",
+      "Node.js",
+      "AWS Services",
+      "DynamoDB",
+      "REST APIs",
+    ],
   },
   {
     title: "Full Stack Developer",
@@ -54,14 +60,16 @@ const education = [
 
 const certifications = [
   {
-    name: "Meta Backend Developer",
-    issuer: "Meta",
+    name: "AWS Certified Cloud Practitioner – Associate",
+    issuer: "AWS",
     icon: Code,
+    image: "/aws-cloud-practitioner.png",
   },
   {
-    name: "Meta Frontend Developer",
+    name: "Meta Full-Stack Engineer Certificate",
     issuer: "Meta",
     icon: Users,
+    image: "/meta-fullstack.svg",
   },
 ];
 
@@ -261,8 +269,16 @@ export default function Experience() {
                     transition={{ duration: 0.4, delay: 1.6 + index * 0.1 }}
                     className="flex items-center space-x-4 p-4 bg-dark-700/50 rounded-lg hover:bg-dark-700/70 transition-colors duration-300"
                   >
-                    <div className="w-12 h-12 bg-primary-500/20 rounded-lg flex items-center justify-center">
-                      <cert.icon className="w-6 h-6 text-primary-400" />
+                    <div className="w-12 h-12 bg-primary-500/20 rounded-lg flex items-center justify-center overflow-hidden">
+                      {cert.image ? (
+                        <img
+                          src={cert.image}
+                          alt={cert.name}
+                          className="w-full h-full object-contain"
+                        />
+                      ) : (
+                        <cert.icon className="w-6 h-6 text-primary-400" />
+                      )}
                     </div>
                     <div className="flex-1">
                       <h4 className="text-white font-semibold">{cert.name}</h4>
