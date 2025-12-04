@@ -20,6 +20,7 @@ const experiences = [
       "Developed an AI virtual assistant on AWS Connect using Claude LLM and SQS with 90% intent accuracy.",
       "Eliminated 100+ manual QA hours/month across 20+ services by automating defect remediation for DynamoDB records with Node.js and SQL pipelines.",
       "Migrated 10+ services from Serverless Framework to AWS CDK, reducing deployment time by 40% and standardizing Infrastructure-as-Code (IaC) practices.",
+      "Onboarded 20+ services to Dynatrace, cutting MTTR by 30%, and centralized 200+ secrets in AWS Secrets Manager for automated rotation and compliance",
       "Collaborated with DevOps to build CI/CD pipelines via GitHub Actions, CloudFormation, and IAM roles.",
     ],
     technologies: [
